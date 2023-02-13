@@ -1,7 +1,8 @@
 <h1>Bondi Website</h1>
 <h3>Hello and Welcome👋</h3>
 <p>welcome to bondi website:</p>
-it's a prototype layout it's about one page using (Bootstrap toolkit).<br>
+it's a responsive website it's about one page using (Bootstrap toolkit).<br>
+you can interact with it using GitHub pages https://khaledabuarida.github.io/bondi-website/<br>
 some sort of practising my bootstrap course.
 
 # Capture👇  
