@@ -1,198 +1,187 @@
 :root {
-    --dark-color: #182840;
-    --green-color: #26bfcc;
-    --red-color: #ff3150;
-    --yellow-color: #ffc400;
-    --section-color: #eff7fa;
+    --dark : #19283f;
+    --green : #56D2BE;
+    --red : #FF2B4A;
+    --yellow: #FFCF01;
+    --section: #FBF7E9;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
-
-/* start navbar  */
+/* Navbar */
 .main-btn {
-    color: var(--yellow-color);
-    background-color: var(--red-color);
+    background-color: var(--red);
+    color: var(--yellow);
+    text-decoration: none;
+    padding: 6px 12px;
+    /* border-radius: 20px; */
+}
+.main-btn:hover {
+    color: var(--yellow);
+    background-color: #eb2240;
 }
 .navbar {
-    background-color: var(--dark-color);
+    background-color: var(--dark);
 }
-
 .navbar .navbar-nav .nav-link {
-    color: #fff;
+    color: white;
+    
 }
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link:focus,
 .navbar .navbar-nav .nav-link:hover {
-    color: var(--green-color);
+    color: var(--green);
 }
-.navbar .search {
-    border-left: 1px solid var(--green-color);
+.navbar .search{
+    color: var(--green);
+    border-left : 1px solid var(--green);
 }
-.navbar .search svg {
-    color: var(--green-color);
-}
-
-.navbar .navbar-toggler {
+.navbar-toggler {
     color: #fff;
     border-color: #fff;
-    font-size: 24px;
 }
-.navbar .navbar-toggler:focus {
+.navbar-toggler i {
+    padding: 2.5px;
+    font-size: 1.4rem;
+}
+.navbar-toggler:focus {
     box-shadow: none;
 }
-.navbar .navbar-toggler[aria-expanded="true"]{
-    border-color: var(--green-color);
+.navbar-toggler[aria-expanded="true"] {
+    border-color: var(--green);
 }
-/* end navbar  */
 
-/* start landing*/
+/* landing */
 .landing {
-    background-color: var(--dark-color);
+    background-color: var(--dark);
     min-height: calc(100vh - 54px);
 }
-/* end landing  */
 
-/* start features  */
-.anchor {
-    color: var(--yellow-color);
-    font-size: 50px;
+/* features */
+.main-title::after {
+    content: '';
+    width: 120px;
+    background-color: var(--green);
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15%;
 }
 
-.main-title::after {
-    content:"";
-    width: 120px;
-    height:2px;
-    background-color: var(--green-color);
-    position: absolute;
-    bottom: -25px;
+.features .icon-holder {
+    height: 220px;
+}
+.features .icon-holder svg {
     left: 50%;
     transform: translateX(-50%);
 }
-
-.feature .icon-holder {
-    height: 200px;
-}
-.feature .icon-holder svg {
-    left: 50%;
-    transform:translateX(-50%);
-}
-.feature .icon-holder .number {
+.features .icon-holder .number {
     font-size: 12rem;
-    color: var(--section-color);
+    color: var(--section);
 }
-.feature .icon-holder .icon {
-    color: var(--green-color);
+.features .icon-holder .icon {
     font-size: 4rem;
+    color: var(--green);
 }
-.feat h4 {
-    color: var(--yellow-color);
+.features h4 {
+    color: var(--yellow);
 }
-/* end features     */
 
-/* start our-work  */
+/* our work */
 .our-work {
-    background-color: var(--section-color);
+    background-color: var(--section);
 }
 
 .our-work ul .active {
-    background-color: var(--red-color);
-    color:#ffc400;
+    background-color: var(--red);
+    color: var(--yellow);
+    padding: 5px;
+    /* border-radius: 20px; */
 }
-
 .our-work ul li {
-    padding: .5rem 1rem;
+    margin: 5px 12px;
 }
 .our-work ul li:not(.active):hover {
-    color: var(--red-color);
+    color: var(--red);
 }
 .our-work .box {
-    overflow: hidden;
     padding: 5px;
-    position: relative;
+    overflow: hidden;   
 }
-
-.our-work .box::before {
+.our-work .box::before{
     content: attr(data-work);
-    background-color: rgb(38 191 204 / 55%);
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
     position: absolute;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    background-color: #ff2b4a54;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
+    font-weight: bold;
     color: #fff;
-    font-size: 1.5rem;
-    transition: .5s;
-    transform: translateY(calc(-100% - 5px));    
+    transition: .3s;
+    transform: translateX(calc(-100% - 5px));
 }
-.our-work .box:hover::before{
-    transform: translateY(0);    
-
+.our-work .box:hover::before {
+    transform: translateX(0);
 }
 
-.our-work .container {
-    background-color: var();
-}
-/* end our-work  */
-
-/* start stuff  */
-.stuff .description {
-    max-width: 500px;
-}
-/* end stuff  */
-
-/* start team  */
+/* team */
 .team {
-    background-color: var(--section-color);
+    background-color: var(--section);
 }
-.team h3 {
-    color: var(--yellow-color);
+.team .title h2 {
+    color: var(--yellow);
 }
 .team .box h4 {
+    background-color: var(--green);
     color: #fff;
-    background-color: var(--green-color);
+    padding: 10px;
+    margin: 0;
 }
-/* end team  */
-
-/* start project section  */
-.project {
-    background-color: var(--dark-color);
+.team .box p {
+    padding: 15px;
 }
 
-/* end project section  */
-
-/* start subscribe section  */
+/* start */
+.start {
+    background-color: var(--dark);
+}
+/* subscribe */
 .subscribe {
-    background-color: var(--yellow-color);
+    background-color: var(--yellow);
 }
 
-.subscribe input {
+.subscribe input[type="email"] {
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid white;
+}
+.subscribe input[type="email"]:focus {
+    outline: none;
 }
 .subscribe input::placeholder {
     color: #fff;
-    /* font-size: 1rem; */
 }
-.subscribe input[type="submit"] {
-    background-color: var(--dark-color);
-    color: var(--yellow-color);
+.subscribe .sub-btn {
+    color: var(--yellow);
+    background-color: var(--dark);
+    text-decoration: none;
+    padding: 6px 12px;
 }
-.subscribe input[type="submit"]:hover {
-    background-color: #182840;
-    color: #fff;
-}
-/* end subscribe section  */
-/* start footer  */
+
+
+/* footer */
 .footer {
-    background-color: var(--dark-color);
+    background-color: var(--dark);
 }
 .footer .copyright > span {
-    color: var(--green-color)
+    color: var(--green)
 }
 .footer .copyright div span {
-    color: var(--yellow-color);
+    color: var(--yellow);
 }
 .facebook {
     color: #1877f2;
@@ -206,4 +195,3 @@ body {
 .youtube {
     color: #ff0000;
 }
-/* end footer  */
